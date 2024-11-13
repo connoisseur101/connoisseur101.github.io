@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connoisseur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Connoisseur</h1>
+        <p>Your curated guide to Japan's finest regions</p>
+    </header>
+
+    <!-- Region Selection -->
+    <section id="region-selection">
+        <h2>Select a Region</h2>
+        <select id="region-select">
+            <!-- Options will be dynamically loaded -->
+        </select>
+    </section>
+
+    <!-- Expandable Region Description -->
+    <section id="region-description">
+        <button class="collapsible">About the Region</button>
+        <div class="content">
+            <p id="region-info">
+                <!-- Region description will be dynamically loaded -->
+            </p>
+        </div>
+    </section>
+
+    <!-- Stores Section -->
+    <section id="stores">
+        <h2>Featured Stores</h2>
+        <div id="stores-container">
+            <!-- Stores will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Tour Guides Section -->
+    <section id="tour-guides">
+        <h2>Recommended Tour Guides</h2>
+        <div id="tour-guides-container">
+            <!-- Tour guides will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate">
+        <h2>Support My Journey</h2>
+        <p>Enjoyed exploring these hidden gems? Your support helps me keep this guide updated and ad-free. If you'd like to contribute, please consider making a small donation.</p>
+        <div class="donation-options">
+            <div class="donation-option">
+                <h3>Bitcoin</h3>
+                <p>Wallet Address: <span id="btc-address">your-bitcoin-address-here</span></p>
+            </div>
+            <div class="donation-option">
+                <h3>Ethereum</h3>
+                <p>Wallet Address: <span id="eth-address">your-ethereum-address-here</span></p>
+            </div>
+            <div class="donation-option">
+                <h3>Wise</h3>
+                <p><a href="your-wise-link-here" target="_blank">Donate via Wise</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Connoisseur © 2024</p>
+    </footer>
+
+    <!-- Include the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

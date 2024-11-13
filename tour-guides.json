@@ -1,0 +1,12 @@
+{
+    "guides": [
+        {
+            "name": "Yuki Tanaka",
+            "languages": ["Japanese", "English"],
+            "description": "An experienced guide with deep knowledge of Tsukiji's history and culture.",
+            "contactLink": "mailto:yuki@example.com",
+            "regions": ["tsukiji"]
+        }
+        // Add more guides as needed
+    ]
+}

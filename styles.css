@@ -1,0 +1,169 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #CCCCCC;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #1E1E1E;
+}
+
+header h1 {
+    color: #FFD700;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    color: #FFD700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.store, .tour-guide {
+    background-color: #1E1E1E;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+}
+
+.store h3, .tour-guide h3 {
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.store p, .tour-guide p {
+    margin-bottom: 10px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #121212;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #E6C200;
+}
+
+.donation-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.donation-option {
+    background-color: #1E1E1E;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.donation-option h3 {
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.donation-option p {
+    word-wrap: break-word;
+    color: #CCCCCC;
+}
+
+#donate a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+#donate a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1E1E1E;
+    color: #666666;
+}
+
+/* Collapsible Content */
+.collapsible {
+    background-color: #FFD700;
+    color: #121212;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 1.2em;
+    margin-bottom: 0;
+}
+
+.collapsible:hover {
+    background-color: #E6C200;
+}
+
+.active {
+    background-color: #E6C200;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #1E1E1E;
+    border-bottom: 1px solid #333333;
+}
+
+.content p {
+    margin: 10px 0;
+}
+
+#region-select {
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #1E1E1E;
+    color: #CCCCCC;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+}
+
+#region-select option {
+    background-color: #1E1E1E;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    .donation-option {
+        flex: 1 1 100%;
+    }
+}

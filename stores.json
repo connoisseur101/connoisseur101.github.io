@@ -1,0 +1,32 @@
+{
+    "stores": [
+        {
+            "name": "Sushi Koromo",
+            "category": "Food",
+            "description": "Known for its relaxed jazz ambiance and morning nigiri sets offering excellent value.",
+            "details": "Sushi Koromo offers a unique dining experience with its fusion of traditional sushi and a modern atmosphere. The chef selects the freshest ingredients daily from the market.",
+            "mapLink": "https://goo.gl/maps/4Z3LvWXF3N92",
+            "online": true,
+            "regionId": "tsukiji"
+        },
+        {
+            "name": "Tsukiji Wine Stand 88",
+            "category": "Food",
+            "description": "A cozy spot to enjoy a selection of wines paired with fresh seafood from the market.",
+            "details": "This wine stand boasts an extensive collection of both local and international wines. The staff is knowledgeable and can recommend pairings with their seafood tapas.",
+            "mapLink": "https://goo.gl/maps/J9s5X1K7LwH2",
+            "online": true,
+            "regionId": "tsukiji"
+        },
+        {
+            "name": "Strawberry Mochi at Tsukiji Soratsuki",
+            "category": "Food",
+            "description": "Indulge in traditional ichigo daifuku with red bean paste and fresh strawberry wrapped in mochi.",
+            "details": "A must-try delicacy, the strawberry mochi here is made fresh daily. The balance of sweetness and texture makes it a favorite among locals and tourists alike.",
+            "mapLink": "https://goo.gl/maps/5hV2dYcX1P62",
+            "online": true,
+            "regionId": "tsukiji"
+        }
+        // Add more stores as needed
+    ]
+}
