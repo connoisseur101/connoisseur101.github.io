@@ -8,10 +8,10 @@
             "regions": ["tsukiji"]
         },
         {
-            "name": "Example Guide",
-            "languages": ["Japanese", "English"],
-            "description": "An experienced guide with deep knowledge of Tsukiji's history and culture.",
-            "contactLink": "mailto:yuki@example.com",
+            "name": "Luiz - Seu guia em Tóquio",
+            "languages": ["Portuguese", "Japanese"],
+            "description": "Brazilian Guide covering Tokyo region and surrounding ares",
+            "contactLink": "https://linktr.ee/seuguiaemtokyo",
             "regions": ["tsukiji"]
         }
 
