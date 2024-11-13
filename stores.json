@@ -10,11 +10,11 @@
             "regionId": "tsukiji"
         },
         {
-            "name": "Tsukiji Wine Stand 88",
+            "name": "Wine Stand 88",
             "category": "Food",
-            "description": "A cozy spot to enjoy a selection of wines paired with fresh seafood from the market.",
-            "details": "This wine stand boasts an extensive collection of both local and international wines. The staff is knowledgeable and can recommend pairings with their seafood tapas.",
-            "mapLink": "https://goo.gl/maps/J9s5X1K7LwH2",
+            "description": "A cozy spot to enjoy a selection of wines paired with delicious wagyu dishes.",
+            "details": "This wine stand boasts an extensive collection of both local and international wines. The staff is knowledgeable and can recommend pairings with their signature wagyu dishes. My recommenation is the wagyu sandwich",
+            "mapLink": "https://maps.app.goo.gl/zcW8qge4GWV8A9P76",
             "online": true,
             "regionId": "tsukiji"
         },
