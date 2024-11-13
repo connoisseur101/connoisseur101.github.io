@@ -1,32 +1,124 @@
 {
     "stores": [
         {
-            "name": "Sushi Koromo",
-            "category": "Food",
-            "description": "Known for its relaxed jazz ambiance and morning nigiri sets offering excellent value.",
-            "details": "Sushi Koromo offers a unique dining experience with its fusion of traditional sushi and a modern atmosphere. The chef selects the freshest ingredients daily from the market.",
-            "mapLink": "https://maps.app.goo.gl/gmZm3r6Euq7FpozY7",
-            "online": true,
+            "name": "Tonboya",
+            "category": "Street Food - Salty",
+            "description": "Specializes in grilled tuna skewers, offering a savory treat for seafood lovers.",
+            "details": "Tonboya is renowned for its freshly grilled tuna skewers, seasoned to perfection. A must-try for those seeking authentic Tsukiji street food.",
+            "mapLink": "https://goo.gl/maps/3Y4Y5Z6Z7Z8Z9A1B7",
+            "online": false,
+            "regionId": "tsukiji"
+        },
+        {
+            "name": "Yamacho",
+            "category": "Street Food - Salty",
+            "description": "Offers egg omelet sticks, a popular snack among visitors.",
+            "details": "Yamacho serves tamagoyaki on a stick, providing a sweet and savory flavor that's perfect for a quick bite.",
+            "mapLink": "https://goo.gl/maps/2B3C4D5E6F7G8H9I7",
+            "online": false,
+            "regionId": "tsukiji"
+        },
+        {
+            "name": "Murakita",
+            "category": "Street Food - Salty",
+            "description": "Known for its grilled seafood offerings, including scallops and oysters.",
+            "details": "Murakita provides a variety of freshly grilled seafood, seasoned and cooked to order, capturing the essence of Tsukiji's market.",
+            "mapLink": "https://goo.gl/maps/4J5K6L7M8N9O0P1Q8",
+            "online": false,
+            "regionId": "tsukiji"
+        },
+        {
+            "name": "Soratsuki",
+            "category": "Street Food - Sweet",
+            "description": "Famous for its strawberry mochi, combining fresh strawberries with sweet red bean paste.",
+            "details": "Soratsuki's ichigo daifuku is a delightful treat, featuring a juicy strawberry encased in sweet red bean paste and soft mochi.",
+            "mapLink": "https://goo.gl/maps/5H6I7J8K9L0M1N2O9",
+            "online": false,
+            "regionId": "tsukiji"
+        },
+        {
+            "name": "Marutama",
+            "category": "Street Food - Sweet",
+            "description": "Offers natural ice cream with a variety of flavors.",
+            "details": "Marutama serves creamy, natural ice cream made from high-quality ingredients, perfect for a sweet indulgence.",
+            "mapLink": "https://goo.gl/maps/6P7Q8R9S0T1U2V3W0",
+            "online": false,
+            "regionId": "tsukiji"
+        },
+        {
+            "name": "Maruni",
+            "category": "Drinks",
+            "description": "Specializes in matcha and other traditional Japanese teas.",
+            "details": "Maruni offers a selection of finely ground matcha and other teas, providing an authentic Japanese tea experience.",
+            "mapLink": "https://goo.gl/maps/7X8Y9Z0A1B2C3D4E1",
+            "online": false,
+            "regionId": "tsukiji"
+        },
+        {
+            "name": "Iroha",
+            "category": "Drinks",
+            "description": "Known for its fresh fruit juices, made from seasonal produce.",
+            "details": "Iroha offers a variety of freshly squeezed juices, providing a refreshing break as you explore the market.",
+            "mapLink": "https://goo.gl/maps/8F9G0H1I2J3K4L5M2",
+            "online": false,
+            "regionId": "tsukiji"
+        },
+        {
+            "name": "Yonemoto Coffee",
+            "category": "Drinks",
+            "description": "A historic café offering a variety of coffee blends.",
+            "details": "Yonemoto Coffee provides a nostalgic ambiance, serving quality coffee that's been enjoyed by patrons for decades.",
+            "mapLink": "https://goo.gl/maps/9N0O1P2Q3R4S5T6U3",
+            "online": false,
             "regionId": "tsukiji"
         },
         {
             "name": "Wine Stand 88",
-            "category": "Food",
+            "category": "Restaurant",
             "description": "A cozy spot to enjoy a selection of wines paired with delicious wagyu dishes.",
-            "details": "This wine stand boasts an extensive collection of both local and international wines. The staff is knowledgeable and can recommend pairings with their signature wagyu dishes. My recommenation is the wagyu sandwich",
+            "details": "This wine stand boasts an extensive collection of both local and international wines. The staff is knowledgeable and can recommend pairings with their signature wagyu dishes. My recommendation is the wagyu sandwich.",
             "mapLink": "https://maps.app.goo.gl/zcW8qge4GWV8A9P76",
             "online": true,
             "regionId": "tsukiji"
         },
         {
-            "name": "Strawberry Mochi at Tsukiji Soratsuki",
-            "category": "Food",
-            "description": "Indulge in traditional ichigo daifuku with red bean paste and fresh strawberry wrapped in mochi.",
-            "details": "A must-try delicacy, the strawberry mochi here is made fresh daily. The balance of sweetness and texture makes it a favorite among locals and tourists alike.",
-            "mapLink": "https://goo.gl/maps/5hV2dYcX1P62",
+            "name": "Yakiuo Ishikawa",
+            "category": "Restaurant",
+            "description": "Offers a unique seafood yakiniku experience.",
+            "details": "Yakiuo Ishikawa allows diners to grill fresh seafood at their table, providing an interactive and flavorful meal.",
+            "mapLink": "https://goo.gl/maps/0A1B2C3D4E5F6G7H4",
+            "online": false,
+            "regionId": "tsukiji"
+        },
+        {
+            "name": "Torito",
+            "category": "Restaurant",
+            "description": "Renowned for its oyakodon, a traditional chicken and egg rice bowl.",
+            "details": "Torito serves a comforting oyakodon, featuring tender chicken and perfectly cooked eggs over rice.",
+            "mapLink": "https://goo.gl/maps/1I2J3K4L5M6N7O8P5",
+            "online": false,
+            "regionId": "tsukiji"
+        },
+        {
+            "name": "4Season",
+            "category": "Restaurant",
+            "description": "Specializes in wafu (Japanese-style) pasta dishes.",
+            "details": "4Season offers a fusion of Italian pasta with Japanese flavors, creating unique and delicious dishes.",
+            "mapLink": "https://goo.gl/maps/2Q3R4S5T6U7V8W9X6",
+            "online": false,
+            "regionId": "tsukiji"
+        },
+        {
+            "name": "Tsukiji Masa",
+            "category": "Restaurant",
+            "description": "Known for its fish burgers, offering a seafood twist on a classic favorite.",
+            "details": "Tsukiji Masa serves freshly made fish burgers, combining crispy fish fillets with flavorful toppings.",
+            "mapLink": "https://goo.gl/maps/3Y4Z5A6B7C8D9E0F7",
             "online": true,
             "regionId": "tsukiji"
         }
         
     ]
 }
+ 
+
