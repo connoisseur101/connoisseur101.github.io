@@ -4,6 +4,11 @@
             "id": "tsukiji",
             "name": "Tsukiji",
             "description": "Tsukiji is a vibrant district in Tokyo, famous for its historic fish market, culinary delights, and rich cultural experiences. Explore the best spots handpicked by a true connoisseur."
+        },
+        {
+            "id": "asakusa",
+            "name": "Asakusa",
+            "description": "know for the Senso Ji Temple"
         }
         // Add more regions as needed
     ]
