@@ -14,12 +14,20 @@
         <p>Your curated guide to Japan's finest regions</p>
     </header>
 
-    <!-- Region Selection -->
+    <!-- Region Buttons -->
     <section id="region-selection">
         <h2>Select a Region</h2>
-        <select id="region-select">
-            <!-- Options will be dynamically loaded -->
-        </select>
+        <div id="region-buttons" class="button-container">
+            <!-- Buttons will be dynamically loaded -->
+        </div>
+    </section>
+
+    <!-- Category Buttons -->
+    <section id="category-selection">
+        <h2>Select a Category</h2>
+        <div id="category-buttons" class="button-container">
+            <!-- Category buttons will be dynamically loaded -->
+        </div>
     </section>
 
     <!-- Expandable Region Description -->
@@ -42,28 +50,32 @@
 
     <!-- Tour Guides Section -->
     <section id="tour-guides">
-        <h2>Recommended Tour Guides</h2>
-        <div id="tour-guides-container">
-            <!-- Tour guides will be dynamically loaded here -->
+        <button class="collapsible">Recommended Tour Guides</button>
+        <div class="content">
+            <div id="tour-guides-container">
+                <!-- Tour guides will be dynamically loaded here -->
+            </div>
         </div>
     </section>
 
     <!-- Donation Section -->
     <section id="donate">
-        <h2>Support My Journey</h2>
-        <p>Enjoyed exploring these hidden gems? Your support helps me keep this guide updated and ad-free. If you'd like to contribute, please consider making a small donation.</p>
-        <div class="donation-options">
-            <div class="donation-option">
-                <h3>BTC</h3>
-                <p><span id="btc-address">bc1q45ym7wn85nzfvt0pk050w6lzmw3ma6qpchw22j</span></p>
-            </div>
-            <div class="donation-option">
-                <h3>ETH</h3>
-                <p><span id="eth-address">0x3F11EC0164eD9eC2262251D7392Ad54952e74C7F</span></p>
-            </div>
-            <div class="donation-option">
-                <h3>Wise</h3>
-                <p><a href="your-wise-link-here" target="_blank">WISE</a></p>
+        <button class="collapsible">Support My Journey</button>
+        <div class="content">
+            <p>Enjoyed exploring these hidden gems? Your support helps me keep this guide updated and ad-free. If you'd like to contribute, please consider making a small donation.</p>
+            <div class="donation-options">
+                <div class="donation-option">
+                    <h3>BTC</h3>
+                    <p><span id="btc-address">bc1q45ym7wn85nzfvt0pk050w6lzmw3ma6qpchw22j</span></p>
+                </div>
+                <div class="donation-option">
+                    <h3>ETH</h3>
+                    <p><span id="eth-address">0x3F11EC0164eD9eC2262251D7392Ad54952e74C7F</span></p>
+                </div>
+                <div class="donation-option">
+                    <h3>Wise</h3>
+                    <p><a href="your-wise-link-here" target="_blank">WISE</a></p>
+                </div>
             </div>
         </div>
     </section>
