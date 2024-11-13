@@ -1,14 +1,17 @@
 // Global Variables
-let selectedRegion = null;
-let placesData = {};
-let storesData = {};
+let selectedRegion = 'tsukiji'; // Default region
+let selectedCategory = 'Street Food'; // Default category
+let placesData = [];
+let storesData = [];
 
 // Load places (regions) from places.json
 fetch('places.json')
     .then(response => response.json())
     .then(data => {
         placesData = data.places;
-        populateRegionSelect(placesData);
+        populateRegionButtons(placesData);
+        loadRegionData(selectedRegion);
+        loadStores(selectedRegion, selectedCategory);
     })
     .catch(error => console.error('Error loading places:', error));
 
@@ -17,33 +20,83 @@ fetch('stores.json')
     .then(response => response.json())
     .then(data => {
         storesData = data.stores;
+        populateCategoryButtons(storesData);
     })
     .catch(error => console.error('Error loading stores:', error));
 
-// Populate the region selection dropdown
-function populateRegionSelect(places) {
-    const regionSelect = document.getElementById('region-select');
+// Populate the region buttons
+function populateRegionButtons(places) {
+    const regionButtonsContainer = document.getElementById('region-buttons');
+    regionButtonsContainer.innerHTML = ''; // Clear previous buttons
+
     places.forEach(place => {
-        const option = document.createElement('option');
-        option.value = place.id;
-        option.textContent = place.name;
-        regionSelect.appendChild(option);
+        const button = document.createElement('button');
+        button.className = 'region-button';
+        button.textContent = place.name;
+        button.dataset.regionId = place.id;
+
+        button.addEventListener('click', function () {
+            selectedRegion = this.dataset.regionId;
+            loadRegionData(selectedRegion);
+            loadStores(selectedRegion, selectedCategory);
+            highlightActiveRegionButton(selectedRegion);
+        });
+
+        regionButtonsContainer.appendChild(button);
     });
 
-    // Set event listener for region selection
-    regionSelect.addEventListener('change', function () {
-        selectedRegion = this.value;
-        loadRegionData(selectedRegion);
-        loadStores(selectedRegion);
+    // Highlight the default region button
+    highlightActiveRegionButton(selectedRegion);
+}
+
+// Highlight the active region button
+function highlightActiveRegionButton(regionId) {
+    const buttons = document.getElementsByClassName('region-button');
+    Array.from(buttons).forEach(button => {
+        if (button.dataset.regionId === regionId) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
+}
+
+// Populate the category buttons
+function populateCategoryButtons(stores) {
+    const categoryButtonsContainer = document.getElementById('category-buttons');
+    categoryButtonsContainer.innerHTML = ''; // Clear previous buttons
+
+    // Get unique categories
+    const categories = [...new Set(stores.map(store => store.category))];
+
+    categories.forEach(category => {
+        const button = document.createElement('button');
+        button.className = 'category-button';
+        button.textContent = category;
+
+        button.addEventListener('click', function () {
+            selectedCategory = category;
+            loadStores(selectedRegion, selectedCategory);
+            highlightActiveCategoryButton(selectedCategory);
+        });
+
+        categoryButtonsContainer.appendChild(button);
     });
 
-    // Trigger initial load for the first region
-    if (places.length > 0) {
-        selectedRegion = places[0].id;
-        regionSelect.value = selectedRegion;
-        loadRegionData(selectedRegion);
-        loadStores(selectedRegion);
-    }
+    // Highlight the default category button
+    highlightActiveCategoryButton(selectedCategory);
+}
+
+// Highlight the active category button
+function highlightActiveCategoryButton(category) {
+    const buttons = document.getElementsByClassName('category-button');
+    Array.from(buttons).forEach(button => {
+        if (button.textContent === category) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
 }
 
 // Load region description
@@ -54,14 +107,19 @@ function loadRegionData(regionId) {
     }
 }
 
-// Load stores for the selected region
-function loadStores(regionId) {
+// Load stores for the selected region and category
+function loadStores(regionId, category) {
     const storesContainer = document.getElementById('stores-container');
     storesContainer.innerHTML = ''; // Clear previous stores
-    const filteredStores = storesData.filter(store => store.regionId === regionId && store.online);
+
+    const filteredStores = storesData.filter(store =>
+        store.regionId === regionId &&
+        store.online &&
+        store.category === category
+    );
 
     if (filteredStores.length === 0) {
-        storesContainer.innerHTML = '<p>No stores available for this region.</p>';
+        storesContainer.innerHTML = '<p>No stores available for this selection.</p>';
         return;
     }
 
@@ -72,7 +130,6 @@ function loadStores(regionId) {
         // Create store content
         const storeContent = `
             <h3>${store.name}</h3>
-            <p><strong>Category:</strong> ${store.category}</p>
             <p>${store.description}</p>
             <a class="button" href="${store.mapLink}" target="_blank">View on Map</a>
             <button class="collapsible">Details</button>
@@ -118,17 +175,23 @@ fetch('tour-guides.json')
     })
     .catch(error => console.error('Error loading tour guides:', error));
 
-// Collapsible Region Description and Store Details
+// Collapsible Sections
 document.addEventListener('DOMContentLoaded', function () {
-    // For region description
-    const regionCollapsible = document.querySelector('#region-description .collapsible');
-    regionCollapsible.addEventListener('click', function () {
-        this.classList.toggle('active');
-        const content = this.nextElementSibling;
-        if (content.style.display === 'block') {
-            content.style.display = 'none';
-        } else {
-            content.style.display = 'block';
+    const collapsibles = document.getElementsByClassName('collapsible');
+    Array.from(collapsibles).forEach(collapsible => {
+        // Start collapsed except for region description
+        if (collapsible.parentElement.id !== 'region-description') {
+            collapsible.nextElementSibling.style.display = 'none';
         }
+
+        collapsible.addEventListener('click', function () {
+            this.classList.toggle('active');
+            const content = this.nextElementSibling;
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
     });
 });
